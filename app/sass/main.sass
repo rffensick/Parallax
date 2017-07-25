@@ -1,0 +1,139 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+@import "bourbon"
+@import "reset"
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+
+.fl-l
+	float: left
+.fl-r
+	float: right
+
+.text-center
+	text-align: center
+.text-left
+	text-align: left
+.text-right
+	text-align: right
+
+.wrapper
+	max-width: 1200px
+	width: 100%
+	padding: 0 15px
+	margin: 0 auto
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.main
+	min-height: 100%
+
+.hidetab
+	position: absolute
+	left: 0
+	top: 0
+	height: 0
+	width: 0
+	overflow: 0
+	z-index: -1
+	opacity: 0
+.tab-cont
+	opacity: 1
+	+tr(opacity 1.4s)
+	&.hidetab
+		opacity: 0
+
+
+// Content
+h1
+	color: #ccc
+	font-weight: 300
+figure
+	margin: auto
+
+#content
+	article
+		max-width: 640px
+		margin: 0 auto
+		text-align: center
+
+img
+	max-width: 100%
+
+.bird-box
+	position: relative
+	height: 600px
+	background: 
+		image: url("../img/bird-bg.jpg")
+		position: top center
+		attachment: fixed
+		size: auto 600px
+	overflow: hidden
+.logo
+	height: 100px
+	width: 100%
+	background:
+		image: url("../img/black-bird-logo.svg")
+		position: center
+		repeat: no-repeat
+	position: absolute
+	top: 50%
+	margin-top: -50px
+.fore-bird
+	width: 960px
+	height: 733px
+	background:
+		color: transparentize(pink, 1)
+		image: url("../img/fore-bird.png")
+		repeat: no-repeat
+		position: right bottom
+	position: absolute
+	left: 50%
+	top: 350px
+	margin-left: -480px
+
+
+.back-bird
+	width: 960px
+	height: 298px
+	background: 
+		// color: transparentize(pink, .3)
+		image: url("../img/back-bird.png")
+		repeat: no-repeat
+		position: top left
+	position: absolute
+	left: 50%
+	margin-left: -480px
+
+
+// header
+// 	position: absolute
+// 	left: 0
+// 	top: 0
+// 	right: 0
+
+// footer
+// 	position: absolute
+// 	left: 0
+// 	bottom: 0
+// 	right: 0
+
+@import "media" // Всегда в конце
